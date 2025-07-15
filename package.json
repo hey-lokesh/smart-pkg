@@ -1,0 +1,18 @@
+{
+  "name": "smart-pkg",
+  "version": "1.0.0",
+  "description": "Auto install and Auto import",
+  "license": "ISC",
+  "author": "lokesh",
+  "type": "commonjs",
+  "main": "index.js",
+  "bin":{
+    "smart-pkg": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3"
+  }
+}
