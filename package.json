@@ -15,6 +15,7 @@
   "dependencies": {
     "@babel/parser": "^7.28.0",
     "@babel/traverse": "^7.28.0",
-    "chokidar": "^4.0.3"
+    "chokidar": "^4.0.3",
+    "express": "^5.1.0"
   }
 }
