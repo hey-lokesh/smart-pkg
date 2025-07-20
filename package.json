@@ -2,7 +2,7 @@
   "name": "smart-pkg",
   "version": "1.0.0",
   "description": "Auto install and Auto import",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE",
   "author": "lokesh",
   "type": "commonjs",
   "main": "index.js",

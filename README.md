@@ -1,3 +1,5 @@
+**License: Custom Developer License – non-commercial use only.**
+
 # ⚡ smart-pkg
 
 > The end of manual installs.  
