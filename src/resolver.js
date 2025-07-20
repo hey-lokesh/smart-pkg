@@ -14,3 +14,9 @@ function findMissingPackages(imported) {
 }
 
 module.exports = { findMissingPackages };
+
+/**
+ * © 2025 LOKESH SINGH DANU. All rights reserved.
+ * Licensed under Custom Developer License. See LICENSE file.
+ */
+

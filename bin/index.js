@@ -2,7 +2,7 @@
 
 const path = require("path");
 const { watchFiles } = require("../src/watcher");
-const { getImportedPackages } = require("../src/parser");
+const { getImportedPackages } = require("../src/parse");
 const { findMissingPackages } = require("../src/resolver");
 const { execSync } = require("child_process");
 
@@ -32,3 +32,9 @@ watchFiles(projectDir, (filePath) => {
         console.log("All packages are installed.");
     }
 });
+
+/**
+ * © 2025 LOKESH SINGH DANU. All rights reserved.
+ * Licensed under Custom Developer License. See LICENSE file.
+ */
+

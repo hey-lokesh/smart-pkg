@@ -22,3 +22,9 @@ function watchFiles(directory, onFileChange) {
 }
 
 module.exports = { watchFiles };
+
+/**
+ * © 2025 LOKESH SINGH DANU. All rights reserved.
+ * Licensed under Custom Developer License. See LICENSE file.
+ */
+

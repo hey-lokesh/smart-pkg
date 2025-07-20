@@ -1,26 +1,45 @@
-# 🔧 smart-pkg
+# ⚡ smart-pkg
 
-> ✨ Automatically installs missing npm packages when you import them. No more "forgot to install" errors!
+> The end of manual installs.  
+> Just code. Save. Keep flowing. We handle the rest.
 
 ---
 
-## 🚀 Why smart-pkg?
+## 🧠 Why smart-pkg?
 
-You know the drill:
+-At the beginning of your coding journey it helps the frustation of seeing error and to open separate terminal and run command .
+-Modern development moves fast — so why are you still manually installing packages?
+
+With `smart-pkg`, just write your imports and keep building.  
+No more context switching. No more `npm install`.  
+The moment you save your file, we detect what you need and install it for you.
+
+---
+
+### 🪄 Example
 
 ```js
-import express from "express"; // oh wait... forgot to `npm install express`
+import express from "express"; // no need to install it manually
 ```
 
-`smart-pkg` watches your project, detects imported packages, and **auto-installs** them the moment you save a file.
+Just write code. Save. Watch it get installed — automatically.  
+Stay in flow.
 
-Just **write code** — let `smart-pkg` handle the rest.
+---
+
+## ⚙️ Features
+
+- ✅ Automatically detects missing packages from `import` or `require()`
+- ✅ Auto-installs them the moment you save
+- ✅ Supports `.js`, `.jsx`, `.ts`, `.tsx`
+- ✅ Works alongside any dev server (React, Vite, etc.)
+- ✅ Built for your productivity
 
 ---
 
 ## 📦 Installation
 
-Install it locally in your project:
+Install locally in your project:
 
 ```bash
 npm i -D smart-pkg
@@ -28,31 +47,33 @@ npm i -D smart-pkg
 
 ---
 
-## ⚙️ Usage
+## 🚀 Usage
 
-### 📍 Option 1: Run directly
+### 🟢 Quick Start
 
-```bash
+```
 npx smart-pkg
 ```
 
-This starts the watcher. Save any `.js`, `.jsx`, `.ts`, or `.tsx` file — and it’ll auto-install missing packages listed in `import` or `require`.
+Then write code like:
+
+```js
+import lodash from "lodash";
+```
+
+Just save your file — and `lodash` will be installed automatically.
 
 ---
 
-### 📍 Option 2: Run alongside your dev server
+### ⚙️ Use with Dev Server
 
-To use `smart-pkg` with React, Vite, Next.js, etc., run it **together** with your app.
+To run `smart-pkg` alongside your dev server, install `concurrently`:
 
-#### 1. Install `concurrently`
-
-```bash
+```
 npm i -D concurrently
 ```
 
-#### 2. Add a script to your `package.json`
-
-For React (CRA):
+Then add this to your `package.json`:
 
 ```json
 "scripts": {
@@ -60,7 +81,7 @@ For React (CRA):
 }
 ```
 
-For Vite:
+Or with Vite:
 
 ```json
 "scripts": {
@@ -68,59 +89,61 @@ For Vite:
 }
 ```
 
-#### 3. Start your app
+Then run your app as usual:
 
-```bash
+```
 npm run dev
 ```
-
-✅ `smart-pkg` runs in the background  
-✅ Your app runs normally  
-✅ Missing packages are auto-installed as you go
 
 ---
 
 ## 🔍 How It Works
 
-1. Watches your `src/` folder (by default)
-2. Parses each changed file
-3. Extracts all `import` and `require()` statements
-4. Checks if those packages are installed
-5. Installs missing ones automatically using `npm install`
-
-Supports:
-
-- ✅ `import ... from "pkg"`
-- ✅ `const x = require("pkg")`
-- ✅ `.js`, `.jsx`, `.ts`, `.tsx`
+1. Watches your `src/` folder for changes
+2. Parses files with `babel` to extract `import` / `require`
+3. Compares used packages to what's installed
+4. Runs `npm install <missing-pkg>` when needed
 
 ---
 
-## 🛡️ Safety
+LICENSE
 
-- Ignores built-in modules like `fs`, `path`, etc.
-- Only installs packages that are actually imported
-- Uses `npm install` under the hood
+- © 2025 LOKESH SINGH DANU. All rights reserved.
+- Licensed under Custom Developer License. See LICENSE file.
+
+## 🔐 Safe by Design
+
+- Skips built-in modules (`fs`, `path`, etc.)
+- Ignores duplicates and existing packages
+- Never installs anything unless it's used
 
 ---
 
-## 🔮 Roadmap (Post MVP)
+## 🔮 Roadmap
 
 - [ ] Auto-import used variables (like VS Code)
-- [ ] Add global ignore config (e.g. `.smart-pkg-ignore`)
-- [ ] Prompt before installing (optional)
-- [ ] Better logging + stats
-- [ ] Support for monorepos / workspaces
+- [ ] `.smart-pkg-ignore` for global rules
+- [ ] Prompt before install (optional mode)
+- [ ] Unused package pruning
+- [ ] Workspace/monorepo support
+
+---
+
+## ❤️ Philosophy
+
+> Don’t fix forgetting — eliminate the need to remember.  
+> smart-pkg lets you stay in code mode — without ever leaving the editor.
 
 ---
 
 ## 🤝 Contributing
 
-Got ideas? Found bugs?  
-Feel free to [open an issue](https://github.com/your-username/smart-pkg/issues) or [submit a PR](https://github.com/your-username/smart-pkg/pulls)!
+We welcome feedback, ideas, and PRs!  
+Open an issue or pull request on GitHub.
 
 ---
 
 ## 📄 License
 
-MIT © 2025 — Built with 💛 for forgetful developers.
+- © 2025 LOKESH SINGH DANU. All rights reserved.
+- Licensed under Custom Developer License. See LICENSE file.
