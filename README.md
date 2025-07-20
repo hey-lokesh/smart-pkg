@@ -1,18 +1,19 @@
 **License: Custom Developer License – non-commercial use only.**
 
-# ⚡ smart-pkg
+# ⚡ pkgenie
 
+> A pkg casting magic just like genie.
 > The end of manual installs.  
 > Just code. Save. Keep flowing. We handle the rest.
 
 ---
 
-## 🧠 Why smart-pkg?
+## 🧠 Why pkgenie?
 
 -At the beginning of your coding journey it helps the frustation of seeing error and to open separate terminal and run command .
 -Modern development moves fast — so why are you still manually installing packages?
 
-With `smart-pkg`, just write your imports and keep building.  
+With `pkgenie`, just write your imports and keep building.  
 No more context switching. No more `npm install`.  
 The moment you save your file, we detect what you need and install it for you.
 
@@ -44,7 +45,7 @@ Stay in flow.
 Install locally in your project:
 
 ```bash
-npm i -D smart-pkg
+npm i -D pkgenie
 ```
 
 ---
@@ -54,7 +55,7 @@ npm i -D smart-pkg
 ### 🟢 Quick Start
 
 ```
-npx smart-pkg
+npx pkgenie
 ```
 
 Then write code like:
@@ -69,7 +70,7 @@ Just save your file — and `lodash` will be installed automatically.
 
 ### ⚙️ Use with Dev Server
 
-To run `smart-pkg` alongside your dev server, install `concurrently`:
+To run `pkgenie` alongside your dev server, install `concurrently`:
 
 ```
 npm i -D concurrently
@@ -79,7 +80,7 @@ Then add this to your `package.json`:
 
 ```json
 "scripts": {
-  "dev": "concurrently \"smart-pkg\" \"react-scripts start\""
+  "dev": "concurrently \"pkgenie\" \"react-scripts start\""
 }
 ```
 
@@ -87,7 +88,7 @@ Or with Vite:
 
 ```json
 "scripts": {
-  "dev": "concurrently \"smart-pkg\" \"vite\""
+  "dev": "concurrently \"pkgenie\" \"vite\""
 }
 ```
 
@@ -121,20 +122,10 @@ LICENSE
 
 ---
 
-## 🔮 Roadmap
-
-- [ ] Auto-import used variables (like VS Code)
-- [ ] `.smart-pkg-ignore` for global rules
-- [ ] Prompt before install (optional mode)
-- [ ] Unused package pruning
-- [ ] Workspace/monorepo support
-
----
-
 ## ❤️ Philosophy
 
 > Don’t fix forgetting — eliminate the need to remember.  
-> smart-pkg lets you stay in code mode — without ever leaving the editor.
+> pkgenie lets you stay in code mode — without ever leaving the editor.
 
 ---
 
