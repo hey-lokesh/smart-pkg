@@ -27,7 +27,9 @@ function getImportedPackages(filePath) {
         }
     });
 
-    return Array.from(imported);
+    return Array.from(imported).filter(pkg => {
+        return !pkg.startsWith('.') && !pkg.startsWith('/');
+    });
 }
 
 module.exports = { getImportedPackages };

@@ -13,12 +13,9 @@ function watchFiles(directory, onFileChange) {
     watcher.on("change", (filePath) => {
         const ext = path.extname(filePath);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
-            console.log(`[watcher] File changed: ${filePath}`);
             onFileChange(filePath);
         }
     });
-
-    console.log(`[watcher] Watching ${directory} for changes...`);
 }
 
 module.exports = { watchFiles };
